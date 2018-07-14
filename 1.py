@@ -1,16 +1,16 @@
 
 
 #1- Create a database. Create the following tables:
-1. Book
+'''1. Book
     2. Titles
     3. Publishers
     4. Zipcodes
     5. AuthorsTitles
-    6. Authors
+    6. Authors'''
 import pymysql as pm
 
 try:
-    con = pm.connect(host='localhost', database='library', user='root',password='R00t_mnl')
+    con = pm.connect(host='localhost', database='library', user='root',password='ramanmalik')
     cursor = con.cursor()
     
     query1 = 'create table zip_codes(zipcode_id int(6) primary key,city varchar(10),state varchar(20),zip_code varchar(6))'
@@ -37,13 +37,13 @@ except pm.DatabaseError as e:
         print("problem",e)
 finally:
    cursor.close()
-   con.close()'''
+   con.close()
 
-'''#2- Insert values in the tables.
+#2- Insert values in the tables.
 import pymysql as pm
 
 try:
-    con = pm.connect(host='localhost', database='library', user='root',password='R00t_mnl')
+    con = pm.connect(host='localhost', database='library', user='root',password='ramanmalik')
     cursor = con.cursor()
 
     query_mul1 = "insert into zip_codes values(%s,%s,%s,%s)"
@@ -107,7 +107,7 @@ finally:
 import pymysql as pm
 
 try:
-    con = pm.connect(host='localhost', database='library', user='root',password='R00t_mnl')
+    con = pm.connect(host='localhost', database='library', user='root',password='ramanmalik')
     cursor = con.cursor()
     
     query_select = 'select * from books'
@@ -136,5 +136,5 @@ except pm.DatabaseError as e:
 finally:
    con.close()
    
-dbs.py
-Displaying dbs.py.
+'''dbs.py
+Displaying dbs.py.'''
